@@ -7,7 +7,7 @@ const cotizacionRouter = Router()
 cotizacionRouter.use(bodyParser.json())
 
 cotizacionRouter.get('/',(req,res)=>{
-    res.send('aaaaaaaa')
+    res.send('holaaaaa')
 })
 
 

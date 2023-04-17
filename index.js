@@ -3,6 +3,7 @@ dotenv.config();
 const { PORT, CLIENT_ORIGIN_URL } = process.env;
 const express = require("express");
 const cors = require("cors");
+const db =require('./db')
 const cotizacionRouter = require('./routes/cotizacion')
 
 const app = express();
