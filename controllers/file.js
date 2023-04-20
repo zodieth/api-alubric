@@ -10,7 +10,14 @@ const getFiles = async () => {
   }
 };
 
-const addFiles = async (firstName, lastName, email, phoneNumber, filePath) => {
+const addFiles = async (
+  firstName,
+  lastName,
+  email,
+  phoneNumber,
+  body,
+  filePath
+) => {
   const file = await Cotizacion.create({
     firstName,
     lastName,
@@ -22,4 +29,12 @@ const addFiles = async (firstName, lastName, email, phoneNumber, filePath) => {
   return file;
 };
 
-module.exports = { getFiles, addFiles };
+const updateFile = async (id) => {
+  const filter = { _id: id };
+  const update = { $set: { active: false } };
+
+  const file = await Cotizacion.updateOne(filter, update);
+  return file;
+};
+
+module.exports = { getFiles, addFiles, updateFile };

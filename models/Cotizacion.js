@@ -24,7 +24,7 @@ const cotizacionScheme = new Schema(
     },
     body: {
       type: String,
-      // required: true,
+      required: true,
     },
     fileName: {
       type: String,
